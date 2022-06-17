@@ -13,9 +13,10 @@ end
 function computeCoeffMatrix()
     coeff=zeros(Complex{Float64},2^n)
     coeff[1]=(1.0+im)
-    # coeff[4]=(1.0-im)
-    # coeff[8]=(-1.0+im)
-    # coeff[16]=(-1.0-im)
+    coeff[4]=(1.0-im)
+    coeff[8]=(-1.0+im)
+    coeff[16]=(-1.0-im)
+    coeff[32]=(-1.0-im)
     coeff/=norm(coeff)
     permMatrix=zeros(Int64,2^n,2^n)
     for i in 0:2^n-1
